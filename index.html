@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Promedio</title>
+</head>
+<body>
+    <script>
+
+        var array = [];
+        let cantidad = prompt("¿Cuántas notas desea ingresar?");
+        let i = 1;
+        let calificacion = 0;
+
+        while(i <= cantidad){
+            let nota = prompt("Ingrese una nota");
+            array.push(nota);
+            i++;
+        }
+
+        for(var x = 0; x < array.length; x++){
+            calificacion += array[x];
+        }
+
+        notaFinal = calificacion / cantidad;
+        notaFinal = Math.round(notaFinal);
+
+        if(notaFinal >= 3.5){
+                alert ("APROBASTE");
+            }else{
+                alert ("REPROBASTE");
+            }
+
+    </script>
+</body>
+</html>
